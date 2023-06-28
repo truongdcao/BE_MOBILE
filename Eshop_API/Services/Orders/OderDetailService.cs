@@ -44,6 +44,8 @@ namespace eshop_api.Services.Orders
             orderDetail.OrderId = idOrder;
             orderDetail.ProductId = orderDetailDTO.ProductId;
             orderDetail.Quantity = orderDetailDTO.Quantity;
+            orderDetail.SizeId = orderDetailDTO.SizeId;
+            orderDetail.ColorId = orderDetailDTO.ColorId;
             orderDetail.Note = orderDetailDTO.Note;
             var result = await _orderDetailRepository.Add(orderDetail);
             await _orderDetailRepository.SaveChangesAsync();
